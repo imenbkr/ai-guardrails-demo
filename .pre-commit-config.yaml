@@ -1,0 +1,14 @@
+# Local hooks: no download at demo time, works on bad conference / office Wi-Fi.
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-lint
+        name: ruff (lint)
+        entry: ruff check
+        language: system
+        types: [python]
+      - id: ruff-format
+        name: ruff (format check)
+        entry: ruff format --check
+        language: system
+        types: [python]

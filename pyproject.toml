@@ -1,0 +1,16 @@
+[project]
+name = "shop"
+version = "0.1.0"
+requires-python = ">=3.10"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+# E/F: classic errors, B: bugbear (mutable defaults...), BLE: blind excepts, UP: modern syntax
+select = ["E", "F", "B", "BLE", "UP"]
